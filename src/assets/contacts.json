@@ -1,0 +1,30 @@
+[
+    {
+        "FirstName": "Mayur",
+        "LastName": "Kapadnis",
+        "Email": "mbk@gmail.com",
+        "PhoneNumber": "9764219647",
+        "Status": true
+    },
+    {
+        "FirstName": "Pranjali",
+        "LastName": "Kapadnis",
+        "Email": "prj@gmail.com",
+        "PhoneNumber": "3242345451",
+        "Status": true
+    },
+    {
+        "FirstName": "Rohit",
+        "LastName": "Kapadnis",
+        "Email": "rbk@gmail.com",
+        "PhoneNumber": "9764219647",
+        "Status": true
+    },
+    {
+        "FirstName": "Bhikaji",
+        "LastName": "Kapadnis",
+        "Email": "brk@gmail.com",
+        "PhoneNumber": "9764219647",
+        "Status": false
+    }
+]

@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-md-12">
+        <button mat-button style="float: right;" (click)="openDialog('',null)">Add Contact</button>
+    </div>
+</div>
+<div class="row">
+    <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Position Column -->
+        <ng-container matColumnDef="FirstName">
+            <mat-header-cell *matHeaderCellDef> First Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.FirstName}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="LastName">
+            <mat-header-cell *matHeaderCellDef> Last Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.LastName}} </mat-cell>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="Email">
+            <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.Email}} </mat-cell>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="PhoneNumber">
+            <mat-header-cell *matHeaderCellDef> Phone Number </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.PhoneNumber}} </mat-cell>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Status">
+            <mat-header-cell *matHeaderCellDef> Status</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.Status?'Active':'Inactive'}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Action">
+            <mat-header-cell *matHeaderCellDef> Edit</mat-header-cell>
+            <mat-cell *matCellDef="let element; let i = index">
+                <mat-icon (click)="openDialog(element,i)">edit</mat-icon>
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Delete">
+            <mat-header-cell *matHeaderCellDef> Delete</mat-header-cell>
+            <mat-cell *matCellDef="let element; let i = index">
+                <mat-icon (click)="delete(i)">delete</mat-icon>
+            </mat-cell>
+        </ng-container>
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns; let i = index"></mat-row>
+    </mat-table>
+
+</div>
